@@ -1,0 +1,119 @@
+.menu-burg {
+  display: none;
+  background-color: #ffcc00;
+  width: 100%;
+  padding: 4px 0;
+  top: 0;
+  z-index: 50;
+  @media (max-width: 767px) {
+    display: block;  
+  }
+  &__header {
+    display: flex;
+    padding: 16px 0 16px 0;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: 26px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1;
+    span {
+      position: relative;
+    }
+    span,
+    span:before,
+    span:after {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: #292929;
+      transition: width .25s ease,
+      transform .25s ease,
+      top .25s ease;
+    }
+    span:before,
+    span:after {
+      position: absolute;
+    }
+    span:before {
+      content: '';
+      top: -8px;
+    } 
+    span:after {
+      content: '';
+      top: 8px;
+    }
+    /* active */
+    &.active span {
+      transform: rotate(45deg);
+      &:before {
+        top: 0;
+        transform: rotate(0);
+      }
+      &:after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    
+  }
+  &__block {
+    display: flex;
+  }
+  &__logo {
+    margin: 0 14px 0 0;
+  }
+  &__title {
+      color: #292929;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 5px 0;
+  }
+  &__subtitle {
+      color: #636363;
+      font-size: 11px;
+      font-weight: 300;
+  }
+  &__box {
+    display: block;
+    position: fixed;
+    visibility: hidden; 
+    top: 0;
+    left: -100%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ffd633;
+    transition: left .25s ease,
+    visibility .25s ease;
+    &.active {
+      visibility: visible;
+      left: 0;
+    }
+    a {
+      display: block;
+      padding: 12px 24px;
+      color: #292929;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition-duration: .25s;
+      &:hover {
+        background-color: #292929;
+        color: #ffd633;
+      }
+    }
+  }
+}
