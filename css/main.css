@@ -884,6 +884,9 @@ body.lock {
   .stat__title span:first-child {
     margin: 0 0 20px 0;
   }
+  .stat__title span {
+    text-align: center;
+  }
 }
 
 .stat__nums {
