@@ -14,8 +14,22 @@ body {
     font-family: "PT Sans";
 }
 .title {
-    
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    &.g {
+        color: #132d03;
+    }
+    &.b {
+        color: #000;
+    }
+    &.w {
+        color: #fff;
+    }
 }
+
+
 .text {
 
 }
@@ -128,7 +142,9 @@ body {
 }
 
 .home {
-    height: 790px;
+    min-height: 790px;
+    padding: 0 0 44px 0;
+    margin: 0 0 80px 0;
     background: url("../images/home/bg.webp") 50% 50%/cover no-repeat;
     .container {
         display: flex;
@@ -234,6 +250,37 @@ body {
                 width: 100%;
             }
         }
+    }
+}
+
+.about {
+    padding: 0 0 30px 0;
+    &__title {
+        margin: 0 0 80px 0;
+    }
+
+    &__image-container {
+        margin: 0 auto 30px auto;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #368c02;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin: 0 0 4px 0;
+        font-size: 18px;
+        color: #0d0d0d;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 18px;
+        color: #0d0d0d;
+        margin: 0 0 50px 0;
     }
 }
 
