@@ -17,7 +17,6 @@ body {
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
     &.g {
         color: #132d03;
     }
@@ -35,7 +34,6 @@ body {
 }
 .button {
     color: #ffffff !important;
-    background-image: linear-gradient(to top, #640000 0%, #640000 3%, #8c0202 5%, #e30000 100%);
     width: 180px;
     height: 40px;
     border-radius: 5px;
@@ -45,8 +43,11 @@ body {
     justify-content: center;
     text-transform: uppercase;
     font-weight: 700;
-    &:hover {
-        background: #368c02;
+    &.r, &.g:hover {
+        background-image: linear-gradient(to top, #640000 0%, #640000 3%, #8c0202 5%, #e30000 100%);
+    }
+    &.g, &.r:hover {
+        background-image: linear-gradient(to top, #2d7700 0%, #2d7700 3%, #3c9b02 5%, #44b300 100%);
     }
 }
 .call {
@@ -106,6 +107,18 @@ body {
         }
     }
 
+}
+.input {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    padding: 18px 19px 16px 19px;
+    font-size: 16px;
+    width: 100%;
+    &::placeholder {
+        color: #626262;
+        font-style: italic;
+    }
 }
 /* content */
 .header {
@@ -219,19 +232,6 @@ body {
             }
         }
     
-        &__input {
-            border: 1px solid #d0d0d0;
-            border-radius: 5px;
-            background-color: #f7f7f7;
-            padding: 18px 19px 16px 19px;
-            font-size: 16px;
-            width: 100%;
-            &::placeholder {
-                color: #626262;
-                font-style: italic;
-            }
-        }
-    
         &__input-name {
             margin: 0 20px 0 0;
             @media(max-width: 767px) {
@@ -283,6 +283,52 @@ body {
         margin: 0 0 50px 0;
     }
 }
+
+.order {
+    background: url("../images/order/bg.webp") 50% 50%/cover no-repeat;
+    min-height: 590px;
+    padding: 80px 0 60px 0;
+    &__title {
+        margin: 0 0 9px 0;
+        font-size: 50px;
+    }
+
+    &__subtitle {
+        color: #ffffff;
+        &-bigger {
+            margin: 0 0 34px 0;
+            font-size: 33px;
+            line-height: 40px;
+        }
+        &-smaller {
+            margin: 0 0 50px 0;
+            font-size: 30px;
+        }
+    }
+
+    .form {
+        padding: 0 25px;
+        @media(max-width: 767px) {
+            padding: 0;
+        }
+        &__input {
+        }
+    
+        &__input-name {
+            margin: 0 0 10px 0;
+        }
+    
+        &__input-tel {
+            margin: 0 0 20px 0;
+        }
+        &__submit {
+            width: 100%;
+            height: 60px;
+            font-size: 20px;
+        }
+    }
+}
+
 
 
 /* fixed */
@@ -353,5 +399,8 @@ body {
 
 /* fancybox popups */
 .fancybox-close-small {
+    display: none;
+}
+.popup {
     display: none;
 }
