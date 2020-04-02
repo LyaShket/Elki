@@ -39,10 +39,6 @@ $(document).ready(function(){
 	}
 });
 
-// fancybox
-$(document).ready(function(){
-	$("a.prod__image-zoom").fancybox();
-});
 
 // inputmask
 $(document).ready(function(){
