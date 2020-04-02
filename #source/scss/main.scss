@@ -380,6 +380,106 @@ body {
     }
 }
 
+.sets {
+    padding: 81px 0 77px 0;
+    min-height: 660px;
+    background: url("../images/sets/bg.webp") 50% 50%/cover no-repeat;
+    &__title {
+        margin: 0 0 20px 0;
+    }
+
+    &__text {
+        font-size: 18px;
+        color: #fff;
+        margin: 0 0 60px 0;
+    }
+
+    .col-md-6 {
+        @media(max-width: 767px) {
+            margin: 0 0 10px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    .item {
+        padding: 30px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @media(max-width: 767px) {
+            padding: 15px;
+        }
+        &__head {
+            width: 356px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 0 40px 0;
+            @media(max-width: 991px) {
+                flex-direction: column;
+                width: auto;
+            }
+        }
+    
+        &__image {
+            @media(max-width: 991px) {
+                margin: 0 0 29px 0;
+            }
+        }
+    
+        &__choices {
+        }
+    
+        &__choice {
+            color: #000000;
+            font-size: 16px;
+            position: relative;
+            padding: 0 0 0 36px;
+            margin: 0 0 29px 0;
+            @media(max-width: 991px) {
+                margin: 0 0 18px 0;
+            }
+            &:last-child {
+                margin: 0;
+            }
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 22px;
+                height: 30px;
+                position: absolute;
+                background: url("../images/sets/icon.webp") 50% 50%/cover no-repeat;
+                left: 0;
+                top: -9px;
+            }
+        }
+    
+        &__body {
+            width: 100%;
+        }
+    
+        &__term {
+            font-size: 20px;
+            color: #000000;
+            margin: 0 0 6px 0;
+            span {
+                font-weight: 700;
+            }
+        }
+    
+        &__button {
+            margin: 30px auto 0 auto;
+            width: 220px;
+            height: 45px;
+            font-size: 16px;
+            @media(max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
+}
 
 /* fixed */
 .fixed-pulse {
