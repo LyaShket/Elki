@@ -20,6 +20,30 @@ $(document).ready(function(){
 	});
 });
 
+// ibg
+$(document).ready(function(){
+	let ibg = document.getElementsByClassName("ibg");
+	for (let i = 0; i < ibg.length; i++) {
+  		let item = $(ibg[i]);
+  		let child = item.children("img");
+		let link = child.attr("src");
+		let background = item.css("background-image");
+		item.css("background", `${background} 100% 100% no-repeat, url(${link}) 50% 50% no-repeat`);
+		if (item.hasClass("ibg-contain")) {
+			item.css("background-size", "contain");
+		}
+		else {
+			item.css("background-size", "cover");
+		}
+		child.remove();
+	}
+});
+
+// fancybox
+$(document).ready(function(){
+	$("a.prod__image-zoom").fancybox();
+});
+
 // inputmask
 $(document).ready(function(){
 	$(".form__input-tel").inputmask({"mask": "+7|8 (999) 999-99-99"})
@@ -44,20 +68,6 @@ $(document).ready(function () {
 	$.fancybox.open($("#popup-thanks"));
 	return false;
 	});
-});
-
-// ibg
-$(document).ready(function(){
-	let ibg = document.getElementsByClassName("ibg");
-	for (let i = 0; i < ibg.length; i++) {
-  		let item = $(ibg[i]);
-  		let child = item.children("img");
-		let link = child.attr("src");
-		let background = item.css("background-image");
-		item.css("background", `${background} 100% 100% no-repeat, url(${link}) 50% 50% no-repeat`);
-		item.css("background-size", "cover");
-		child.remove();
-	}
 });
 
 // sliders
