@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @import "zerostyle";
-@import "slider";
 @import "burger";
 @import "fonts";
 
@@ -69,9 +68,6 @@ body {
     &__title {
         color: #0d0d0d;
         margin: 0 0 15px 0;
-    }
-
-    &__list {
     }
 
     &__item {
@@ -144,9 +140,6 @@ body {
         margin: 0 0 14px 0;
     }
 
-    &__prices {
-    }
-
     &__price {
         color: #000000;
         margin: 0 0 4px 0;
@@ -168,9 +161,6 @@ body {
 /* content */
 .header {
     padding: 20px 0 17px 0;
-    &__call {
-        
-    }
 }
 
 .navbar {
@@ -293,9 +283,6 @@ body {
             }
         }
     
-        &__input-tel {
-        }
-    
         &__submit {
             width: 300px;
             height: 55px;
@@ -365,9 +352,7 @@ body {
         @media(max-width: 767px) {
             padding: 0;
         }
-        &__input {
-        }
-    
+
         &__input-name {
             margin: 0 0 10px 0;
         }
@@ -480,9 +465,6 @@ body {
             }
         }
     
-        &__choices {
-        }
-    
         &__choice {
             color: #000000;
             font-size: 16px;
@@ -555,9 +537,6 @@ body {
         @media(max-width: 991px) {
             margin: 0 0 10px 0;
         }
-    }
-
-    &__body {
     }
 
     &__label {
@@ -669,9 +648,6 @@ body {
         margin: 0 0 49px 0;
     }
 
-    &__list {
-    }
-
     &__item {
         color: #000000;
         padding: 0 0 0 51px;
@@ -736,6 +712,7 @@ body {
     line-height: 100px;
     color: #fff;
     font-size: 50px;
+    outline: none !important;
     cursor: pointer;
     &:before,
     &:after {
