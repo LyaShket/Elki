@@ -1,8 +1,7 @@
 .menu-burg {
   display: none;
-  background-color: #ffcc00;
   width: 100%;
-  padding: 4px 0;
+  padding: 0 0;
   top: 0;
   z-index: 50;
   @media (max-width: 767px) {
@@ -29,7 +28,7 @@
       display: block;
       width: 26px;
       height: 2px;
-      background-color: #292929;
+      background-color: #e30000;
       transition: width .25s ease,
       transform .25s ease,
       top .25s ease;
@@ -89,31 +88,24 @@
     position: fixed;
     visibility: hidden; 
     top: 0;
-    left: -100%;
-    height: 100%;
+    right: -100%;
     margin: 0;
-    padding: 80px 0;
+    padding: 80px 0 24px 0;
     list-style: none;
-    background-color: #ffd633;
-    transition: left .25s ease,
+    background-color: #eee;
+    transition: right .25s ease,
     visibility .25s ease;
     &.active {
       visibility: visible;
-      left: 0;
+      right: 0;
     }
     a {
       display: block;
       padding: 12px 24px;
       color: #292929;
-      font-family: 'Roboto', sans-serif;
       font-size: 20px;
       font-weight: 600;
       text-decoration: none;
-      transition-duration: .25s;
-      &:hover {
-        background-color: #292929;
-        color: #ffd633;
-      }
     }
   }
 }

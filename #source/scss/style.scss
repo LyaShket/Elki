@@ -174,8 +174,17 @@ body {
 }
 
 .navbar {
-    background-color: #3da001;
+    background-color: #368c02;
     border-radius: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    @media(max-width: 767px) {
+        background: none;
+        position: fixed;
+        padding: 0 20px;
+        right: 0;
+    }
     &__links {
         display: flex;
         max-width: 654px;
@@ -183,17 +192,17 @@ body {
         padding: 11px 0;
         margin: 0 auto;
         @media(max-width: 767px) {
-            flex-direction: column;
+            display: none;
         }
-    }
-    &__link {
-        font-size: 18px;
-        color: #ffffff !important;
-        text-decoration: underline;
-        @media(max-width: 767px) {
-            margin: 0 0 10px 0;
-            &:last-child {
-                margin: 0;
+        a {
+            font-size: 18px;
+            color: #ffffff !important;
+            text-decoration: underline;
+            @media(max-width: 767px) {
+                margin: 0 0 10px 0;
+                &:last-child {
+                    margin: 0;
+                }
             }
         }
     }

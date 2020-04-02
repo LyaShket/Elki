@@ -248,9 +248,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-burg {
   display: none;
-  background-color: #ffcc00;
   width: 100%;
-  padding: 4px 0;
+  padding: 0 0;
   top: 0;
   z-index: 50;
 }
@@ -294,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 26px;
   height: 2px;
-  background-color: #292929;
+  background-color: #e30000;
   -webkit-transition: width .25s ease, top .25s ease, -webkit-transform .25s ease;
   transition: width .25s ease, top .25s ease, -webkit-transform .25s ease;
   transition: width .25s ease, transform .25s ease, top .25s ease;
@@ -373,36 +372,27 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   visibility: hidden;
   top: 0;
-  left: -100%;
-  height: 100%;
+  right: -100%;
   margin: 0;
-  padding: 80px 0;
+  padding: 80px 0 24px 0;
   list-style: none;
-  background-color: #ffd633;
-  -webkit-transition: left .25s ease, visibility .25s ease;
-  transition: left .25s ease, visibility .25s ease;
+  background-color: #eee;
+  -webkit-transition: right .25s ease, visibility .25s ease;
+  transition: right .25s ease, visibility .25s ease;
 }
 
 .menu-burg__box.active {
   visibility: visible;
-  left: 0;
+  right: 0;
 }
 
 .menu-burg__box a {
   display: block;
   padding: 12px 24px;
   color: #292929;
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-}
-
-.menu-burg__box a:hover {
-  background-color: #292929;
-  color: #ffd633;
 }
 
 /* common styles */
@@ -640,8 +630,21 @@ body.lock {
 }
 
 .navbar {
-  background-color: #3da001;
+  background-color: #368c02;
   border-radius: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    background: none;
+    position: fixed;
+    padding: 0 20px;
+    right: 0;
+  }
 }
 
 .navbar__links {
@@ -658,24 +661,21 @@ body.lock {
 
 @media (max-width: 767px) {
   .navbar__links {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: none;
   }
 }
 
-.navbar__link {
+.navbar__links a {
   font-size: 18px;
   color: #ffffff !important;
   text-decoration: underline;
 }
 
 @media (max-width: 767px) {
-  .navbar__link {
+  .navbar__links a {
     margin: 0 0 10px 0;
   }
-  .navbar__link:last-child {
+  .navbar__links a:last-child {
     margin: 0;
   }
 }
