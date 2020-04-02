@@ -790,9 +790,35 @@ body {
 }
 
 /* fancybox popups */
-.fancybox-close-small {
-    display: none;
-}
 .popup {
     display: none;
+}
+.popup-back-call {
+    .popup {
+		&__title {
+            text-align: center;
+            font-size: 32px;
+            margin: 0 0 20px 0;
+            @media(max-width: 346px) {
+                font-size: 28px;
+            }
+        }
+        &__text {
+            font-size: 14px;
+            text-align: center;
+            margin: 0 0 30px 0;
+        }
+    }
+    .form {
+
+        &__input {
+            margin: 0 0 20px 0;
+        }
+
+        &__submit {
+            height: 56px;
+            width: 100%;
+            font-size: 20px;
+        }
+    }
 }

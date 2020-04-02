@@ -1442,10 +1442,34 @@ body.lock {
 }
 
 /* fancybox popups */
-.fancybox-close-small {
+.popup {
   display: none;
 }
 
-.popup {
-  display: none;
+.popup-back-call .popup__title {
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 346px) {
+  .popup-back-call .popup__title {
+    font-size: 28px;
+  }
+}
+
+.popup-back-call .popup__text {
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.popup-back-call .form__input {
+  margin: 0 0 20px 0;
+}
+
+.popup-back-call .form__submit {
+  height: 56px;
+  width: 100%;
+  font-size: 20px;
 }

@@ -613,8 +613,13 @@
     </button>
     <!-- popup -->
     <div class="popup-back-call popup" id="popup-back-call">
-        <!-- position: absolute -->
-        <button class="popup__close" data-fancybox-close title="Закрыть"></button>
+        <h3 class="popup__title title b">Обратная связь</h3>
+        <p class="popup__text">Мы Вам перезвоним в течении 15 минут!</p>
+        <form action="#" class="popup__form form">
+            <input type="text" name="name" class="form__input form__input-name input" placeholder="Ваше имя" required>
+            <input type="text" name="tel" class="form__input form__input-tel input" placeholder="Ваш телефон" pattern="\+[7|8]\s[\(][0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+            <input type="submit" value="СКАЧАТЬ ПРАЙС" class="form__submit button r">
+        </form>
     </div>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
