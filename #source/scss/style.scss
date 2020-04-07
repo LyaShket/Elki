@@ -9,6 +9,8 @@ body {
     &.lock {
         overflow-y: hidden;
     }
+}
+.wrapper {
     font-family: "PT Sans";
 }
 .title {
@@ -768,6 +770,7 @@ body {
 /* fancybox popups */
 .popup {
     display: none;
+    font-family: "PT Sans";
 }
 .popup-back-call {
     .popup {

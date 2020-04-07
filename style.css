@@ -230,11 +230,14 @@ h1, h2, h3, h4, h5, h6 {
 /* common styles */
 body {
   overflow-x: hidden;
-  font-family: "PT Sans";
 }
 
 body.lock {
   overflow-y: hidden;
+}
+
+.wrapper {
+  font-family: "PT Sans";
 }
 
 .title {
@@ -1277,6 +1280,7 @@ body.lock {
 /* fancybox popups */
 .popup {
   display: none;
+  font-family: "PT Sans";
 }
 
 .popup-back-call .popup__title {
